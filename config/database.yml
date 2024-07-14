@@ -11,7 +11,7 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8mb4
+  encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
   database: stamp_database_app_production
   username: stamp_database_app
   password: <%= ENV["STAMP_DATABASE_APP_DATABASE_PASSWORD"] %>
