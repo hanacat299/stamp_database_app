@@ -1,4 +1,4 @@
-#!/usr/build/env bash
+#!/usr/bin/env bash
 # wxit on error
 set -o errexit
 
