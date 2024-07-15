@@ -1,5 +1,7 @@
 class Stamp < ApplicationRecord
 
+  has_one_attached :image
+
   with_options presence: true do
     validates :image
     validates :number, numericality: { only_integer: true, greater_than: 0 }
