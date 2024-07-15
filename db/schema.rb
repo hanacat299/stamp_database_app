@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_15_071124) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_15_081619) do
   create_table "stamps", charset: "utf8mb4", force: :cascade do |t|
     t.integer "number", null: false
     t.string "name", null: false
@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_15_071124) do
     t.text "remark", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "push_pressure"
   end
 
 end

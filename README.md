@@ -14,6 +14,7 @@
 | paper_weight     | string     | null: false                    |
 | temperature      | integer    | null: false                    |
 | push_time        | integer    | null: false                    |
+| push_pressure    | integer    | null: false                    |
 | set_time_id      | integer    | null: false                    |
 | remark           | text       |                                |
 
