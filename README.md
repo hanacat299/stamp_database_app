@@ -8,6 +8,7 @@
 | width            | integer    | null: false                    |
 | design_id        | integer    | null: false                    |
 | stamp_color_id   | integer    | null: false                    |
+| stamp_number     | string     | null: false                    |
 | paper_color_id   | integer    | null: false                    |
 | paper_name       | string     | null: false                    |
 | paper_weight     | string     | null: false                    |
