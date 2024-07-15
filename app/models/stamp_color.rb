@@ -1,4 +1,4 @@
-class SetTime < ActiveHash::Base
+class StampColor < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'カタニ30（青金）' },

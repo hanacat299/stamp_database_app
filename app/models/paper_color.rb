@@ -8,11 +8,11 @@ class PaperColor < ActiveHash::Base
     { id: 6, name: '青' },
     { id: 7, name: '赤' },
     { id: 8, name: '黄' },
-    { id: 4, name: '緑' },
-    { id: 9, name: '紫' },
-    { id: 10, name: '金' },
-    { id: 11, name: '銀' },
-    { id: 12, name: '蛍光色' },
+    { id: 9, name: '緑' },
+    { id: 10, name: '紫' },
+    { id: 11, name: '金' },
+    { id: 12, name: '銀' },
+    { id: 13, name: '蛍光色' },
   ]
 
   include ActiveHash::Associations

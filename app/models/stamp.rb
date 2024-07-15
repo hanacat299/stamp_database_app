@@ -3,7 +3,7 @@ class Stamp < ApplicationRecord
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :desgin
+  belongs_to :design
   belongs_to :stamp_color
   belongs_to :paper_color
   belongs_to :set_time
@@ -14,7 +14,7 @@ class Stamp < ApplicationRecord
     validates :name
     validates :height, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 350, message: "must be between 0 and 350" }
     validates :width, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 480, message: "must be between 0 and 480" }
-    validates :desgin_id, numericality: { other_than: 1, message: "must be other than 1", message: "can't be blank" }
+    validates :design_id, numericality: { other_than: 1, message: "must be other than 1", message: "can't be blank" }
     validates :stamp_color_id, numericality: { other_than: 1, message: "must be other than 1", message: "can't be blank"}
     validates :stamp_number
     validates :paper_color_id, numericality: { other_than: 1, message: "must be other than 1", message: "can't be blank" }
