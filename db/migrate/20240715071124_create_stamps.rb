@@ -14,7 +14,7 @@ class CreateStamps < ActiveRecord::Migration[7.0]
       t.integer :temperature,    null: false
       t.integer :push_time,      null: false
       t.integer :set_time_id,    null: false
-      t.text :remark,            null: false
+      t.text :remark
     
 
       t.timestamps
