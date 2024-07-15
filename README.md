@@ -14,7 +14,7 @@
 | temperature      | integer    | null: false                    |
 | push_time        | integer    | null: false                    |
 | set_time_id      | integer    | null: false                    |
-| remark           | text       | null: false                    |
+| remark           | text       |                                |
 
 
 
@@ -29,4 +29,4 @@
 | content    | text       | null: false                    |
 
 
-- belongs_to :stamps
+- belongs_to :stamp
