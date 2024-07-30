@@ -1,6 +1,8 @@
 class StampsController < ApplicationController
+
   def index
   end
+  
   def new
     @stamp = Stamp.new
   end
