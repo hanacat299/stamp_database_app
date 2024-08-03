@@ -5,8 +5,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: 100px;
+}
+
+.header-title{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 .left-header {
