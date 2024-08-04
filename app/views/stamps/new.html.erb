@@ -38,7 +38,7 @@
     <div class='new-stamp-text'>
       箔色
     </div>
-     <%= f.collection_select(:stamp_color, StampColor.all, :id, :name, {}, {class:"new-stamp-content", id:"stamp-color"}) %>
+     <%= f.collection_select(:stamp_color_id, StampColor.all, :id, :name, {}, {class:"new-stamp-content", id:"stamp-color"}) %>
   </div>
 
 
@@ -63,7 +63,7 @@
     <div class='new-stamp-text'>
      デザイン
     </div>
-      <%= f.collection_select(:design, Design.all, :id, :name, {}, {class:"new-stamp-content", id: "desgin"}) %>
+      <%= f.collection_select(:design_id, Design.all, :id, :name, {}, {class:"new-stamp-content", id: "desgin"}) %>
   </div>
 
   <div class='new-stamp-group'>
@@ -77,7 +77,7 @@
     <div class='new-stamp-text'>
       紙色
     </div>
-      <%= f.collection_select(:paper_color,PaperColor.all, :id, :name, {}, {class:"new-stamp-content", id: "paper-color"}) %>
+      <%= f.collection_select(:paper_color_id,PaperColor.all, :id, :name, {}, {class:"new-stamp-content", id: "paper-color"}) %>
   </div>
 
   <div class='new-stamp-group'>
@@ -112,7 +112,7 @@
     <div class='new-stamp-text'>
       セット時間
     </div>
-     <%= f.collection_select(:set_time, SetTime.all, :id, :name, {}, {class:"new-stamp-content", id: "set-teime"}) %>
+     <%= f.collection_select(:set_time_id, SetTime.all, :id, :name, {}, {class:"new-stamp-content", id: "set-teime"}) %>
   </div>
 
   <div class='new-stamp-group'>

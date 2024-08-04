@@ -9,6 +9,11 @@ class StampsController < ApplicationController
 
   def create
     @stamp = Stamp.new(stamp_params)
+    if @stamp.save
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
