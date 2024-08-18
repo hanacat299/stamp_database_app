@@ -1,0 +1,14 @@
+/* フッターのCSS */
+
+.footer-contents{
+  background-color: #BBC4E4;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright{
+  color: white;
+}

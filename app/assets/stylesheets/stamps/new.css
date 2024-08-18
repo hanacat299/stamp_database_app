@@ -1,0 +1,70 @@
+.new-stamp-wrapper{
+  width: 100vw;
+}
+
+.new-stamp-title{
+  text-align: center;
+  margin: 50px 0;
+}
+
+.new-stamp-image{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.click-upload{
+  margin-left: 55px;
+}
+
+.new-stamp-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-stamp-group{
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.new-stamp-text{
+  flex: 0 0 150px;
+}
+
+.new-stamp-group span{
+ margin: 0 5px;
+}
+
+.stamp-size{
+  display: flex;
+}
+
+.new-stamp-submit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.save-stamp{
+  font-size: 16px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color:  #BBC4E4;
+  margin-bottom: 20px;
+}
+
+.save-stamp:hover{
+  opacity: 0.5;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: gray;
+  font-size: 16px;
+}
