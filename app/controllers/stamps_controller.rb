@@ -21,6 +21,20 @@ class StampsController < ApplicationController
     @stamp = Stamp.find(params[:id])
   end
 
+  def edit
+    @stamp = Stamp.find(params[:id])
+  end
+
+  def update
+    @stamp = Stamp.find(params[:id])
+    
+    if @stamp.update(stamp_params)
+      redirect_to stamp_path(@stamp)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def stamp_params

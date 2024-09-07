@@ -23,7 +23,7 @@ JOB No.<%= @stamp.number %><br>
 セット時間<%= @stamp.set_time.name %><br>
 備考<%= @stamp.remark %>
 
-編集
+<%= link_to "編集", edit_stamp_path(@stamp.id), method: :get, class:"edit_btn" %>
 削除
 <%= link_to "戻る", root_path, class:"back_btn" %>
 
