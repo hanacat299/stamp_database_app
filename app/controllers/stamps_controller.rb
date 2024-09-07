@@ -27,12 +27,20 @@ class StampsController < ApplicationController
 
   def update
     @stamp = Stamp.find(params[:id])
-    
+
     if @stamp.update(stamp_params)
       redirect_to stamp_path(@stamp)
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @stamp = Stamp.find(params[:id])
+    if @stamp.destroy
+      redirect_to root
+    else
+      redirect_to root_path
   end
 
   private
