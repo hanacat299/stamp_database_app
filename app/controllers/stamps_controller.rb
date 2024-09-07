@@ -38,9 +38,10 @@ class StampsController < ApplicationController
   def destroy
     @stamp = Stamp.find(params[:id])
     if @stamp.destroy
-      redirect_to root
+      redirect_to root_path
     else
       redirect_to root_path
+    end
   end
 
   private
