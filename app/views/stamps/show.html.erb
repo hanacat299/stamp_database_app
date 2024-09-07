@@ -24,7 +24,7 @@ JOB No.<%= @stamp.number %><br>
 備考<%= @stamp.remark %>
 
 <%= link_to "編集", edit_stamp_path(@stamp.id), method: :get, class:"edit_btn" %>
-削除
+<%= link_to "削除", "/stamps/#{@stamp.id}", data: { turbo_method: :delete }, class:"stamp-destroy" %>
 <%= link_to "戻る", root_path, class:"back_btn" %>
 
 <%= render "shared/footer" %>
