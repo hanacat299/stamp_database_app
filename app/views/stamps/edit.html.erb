@@ -1,0 +1,134 @@
+<%= render "shared/header" %>
+
+編集
+
+ <%= form_with(model: @stamp, local: true) do |f| %>
+
+ <%# 商品画像 %>
+ <div class='new-stamp-image'>
+ <div class='image-upload'>
+   デザイン画像
+  </div>
+
+  <div class='click-upload'>
+    <%= f.file_field :image, id:"stamp-image" %>
+  </div>
+  </div>
+
+<%# 各種情報の登録欄 %>
+  <div class='new-stamp-group'>
+     <div class='new-stamp-text'>
+      JOB No.
+     </div>
+      <%= f.text_field :number, class: "new-stamp-content" %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+     品名
+    </div>
+     <%= f.text_field :name, class: "new-stamp-content" %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      箔色
+    </div>
+     <%= f.collection_select(:stamp_color_id, StampColor.all, :id, :name, {}, {class:"new-stamp-content", id:"stamp-color"}) %>
+  </div>
+
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      箔型番
+    </div>
+    <%= f.text_field :stamp_number, class: "new-stamp-content" %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      版サイズ
+    </div>
+       <div class='stamp-size'>
+          <%= f.text_field :height, class: "new-stamp-contet", placeholder: "タテ" %><span>mm×</span>
+          <%= f.text_field :width, class: "new-stamp-contet", placeholder: "ヨコ" %><span>mm</span>
+       </div>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+     デザイン
+    </div>
+      <%= f.collection_select(:design_id, Design.all, :id, :name, {}, {class:"new-stamp-content", id: "desgin"}) %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      紙名
+    </div>
+      <%= f.text_field :paper_name, class: "new-stamp-content",placeholder: "例：タント N-8" %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      紙色
+    </div>
+      <%= f.collection_select(:paper_color_id,PaperColor.all, :id, :name, {}, {class:"new-stamp-content", id: "paper-color"}) %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      紙厚
+    </div>
+    <%= f.text_field :paper_weight, class: "new-stamp-content", placeholder: "例:L判/T目/63.5kg" %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      温度
+    </div>
+     <%= f.text_field :temperature, class: "new-stamp-content" %><span>℃</span>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      圧力
+    </div>
+     <%= f.text_field :push_pressure, class: "new-stamp-content" %><span>t</span>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      押し時間
+    </div>
+    <%= f.text_field :push_time, class: "new-stamp-content" %><span>秒</span>
+  </div>
+ 
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      セット時間
+    </div>
+     <%= f.collection_select(:set_time_id, SetTime.all, :id, :name, {}, {class:"new-stamp-content", id: "set-teime"}) %>
+  </div>
+
+  <div class='new-stamp-group'>
+    <div class='new-stamp-text'>
+      備考
+     </div>
+    <%= f.text_area :remark, class: "new-stamp-content", placeholder: "例：紙にエンボスあり"  %>
+  </div>
+
+  <%# 登録ボタン %>
+
+  <div class='new-stamp-submit'>
+    <%= f.submit "変更する", class:"save-stamp"%>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+ </div>
+
+
+ <% end %>
+
+</div>
+
+
+<%= render "shared/footer" %>
