@@ -17,6 +17,9 @@ class StampsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def stamp_params
