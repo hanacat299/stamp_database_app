@@ -17,6 +17,10 @@ class StampsController < ApplicationController
     end
   end
 
+  def show
+    @stamp = Stamp.find(params[:id])
+  end
+
   private
 
   def stamp_params

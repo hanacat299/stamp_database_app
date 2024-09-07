@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+
+<%= image_tag @stamp.image.variant(resize: '300x300') %><br>
+
+品名<%= @stamp.name %><br>
+
+JOB No.<%= @stamp.number %><br>
+
+タテ<%= @stamp.height %>mm×
+ヨコ<%= @stamp.width %>mm<br>
+
+デザイン<%= @stamp.design.name %><br>
+
+箔色<%= @stamp.stamp_color.name %><br>
+箔型番<%= @stamp.stamp_number %><br>
+
+紙名<%= @stamp.paper_name %><br>
+紙厚<%= @stamp.paper_weight %><br>
+紙色<%= @stamp.paper_color.name %><br>
+温度<%= @stamp.temperature %>℃<br>
+押し時間<%= @stamp.push_time %>秒<br>
+圧力<%= @stamp.push_pressure %>t<br>
+セット時間<%= @stamp.set_time.name %><br>
+備考<%= @stamp.remark %>
+
+編集
+削除
+<%= link_to "戻る", root_path, class:"back_btn" %>
+
+<%= render "shared/footer" %>
