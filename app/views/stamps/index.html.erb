@@ -6,15 +6,17 @@
   <ul class="stamp-lists">
     <% @stamps.each do |stamp| %>
       <li class="stamp-list">
+
+      <%= link_to stamp do %>
         <%= image_tag stamp.image.variant(resize: '100x100') , class: "stamp-img" %>
 
         <div class="stamp-info">
           JOB No.<%= stamp.number %>
           品名<%= stamp.name %>
         </div>
-
-      </li>
-    <% end %>
+     <% end %>
+     </li>
+   <% end %>
   </ul>
 
 
